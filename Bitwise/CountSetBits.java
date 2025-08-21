@@ -1,0 +1,26 @@
+public class CountSetBits
+{
+    static int countSetBits(int n){
+        int count = 0;
+        while(n!=0){
+            if((n&1) != 0) count++;
+            n>>=1;
+        }
+       return count;
+    }
+
+    // Brian Kerningam's Algorithm  TC = O(no. of set bits)
+    static int countSetBitsOptimal(int n){
+        int count = 0;
+        while(n!=0){
+            n = n&(n-1);
+            count++;
+        }
+        return count;
+    }
+    public static void main(String[] args)
+    {
+        System.out.println(countSetBits(10));
+        System.out.println(countSetBitsOptimal(10));
+    }
+}
