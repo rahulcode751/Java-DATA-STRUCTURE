@@ -92,5 +92,4 @@ java_*.hprof
 # Snyk generated files
 .dccache
 
-# cg-neo4j-trigger jars used when running neo4j locally
 *.jar
